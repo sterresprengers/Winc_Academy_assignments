@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+
+h1, nav {
+  color: whitesmoke;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 50px;
+  padding-top: 30px;
+}
+
+footer {
+  color: whitesmoke;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px 0px;
+}/*# sourceMappingURL=style.css.map */

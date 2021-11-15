@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+.nav-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.btn-hover-nav {
+    width: 60px; 
+    height: 100%;
+    background-color: #f98f39;
+    background-image: url("hamburger.png");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+.nav-main ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .nav-bar-item {
+        list-style: none;
+        line-height: 60px;
+    }
+    a {
+        display: block;
+        height: 100%;
+        padding: 0 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #111;
+        font-family: arial;
+        font-size: 16px;
+    }
+}
+
+.nav-sidebar {
+    margin: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: calc(100vh - 60px);
+    padding: 0 5px;
+    background-color: #1b1b1b;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+    .color-menu {
+        padding-top: 15px;
+        padding-left: 0px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    li {
+        line-height: 60px;
+        list-style: none;
+    }
+    .color-option {
+        display: block;
+        height: 60px;
+        padding: 0 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: arial;
+        font-size: 16px;
+        white-space: nowrap;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.red-background {
+    background-color: rgb(158, 36, 36);
+}
+.yellow-background {
+    background-color: rgb(231, 231, 84); 
+}
+.blue-background {
+    background-color: rgb(54, 54, 158);
+}
+.green-background {
+    background-color: rgb(46, 134, 46);
+}
+
+
+
+.btn-red {
+    background-color: rgb(158, 36, 36);
+}
+.btn-yellow {
+    background-color: rgb(231, 231, 84); 
+}
+.btn-blue {
+    background-color: rgb(54, 54, 158);
+}
+.btn-green {
+    background-color: rgb(46, 134, 46);
+}
+
+// .nav-sidebar-open { //this does work as addEventListener
+//     width: 150px;
+// }
+// .color-menu-visible { //this won't work as addEventListener - don't know why!!
+//     visibility: visible;
+// }
