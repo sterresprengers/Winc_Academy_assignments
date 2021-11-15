@@ -1,0 +1,12 @@
+$base-dark: #97d279;
+$base-light: #c0eea9;
+$shadow-effect: 0px 10px 7px -9px rgba(0, 0, 0, 0.75);
+$text-color: #090b08;
+$bodytext-width: 700px;
+$standard-padding: 20px;
+
+@mixin textLayout {
+  max-width: 700px;
+  text-align: center;
+  padding: $standard-padding;
+}

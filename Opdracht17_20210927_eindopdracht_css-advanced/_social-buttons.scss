@@ -1,0 +1,99 @@
+@mixin social-button-text {
+  font-size: 12px;
+  color: #fff;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10px;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@mixin icon-before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .social-blog {
+    @include social-button-text();
+    background-color: #e17b77;
+    transform: translateX(75%);
+    transition-duration: 1000ms;
+    &::before {
+      @include icon-before();
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f5fc";
+    }
+    &:hover {
+        transform: translateX(0%);
+    }
+  }
+  .social-twitter {
+    @include social-button-text();
+    background-color: #00aced;
+    transform: translateX(76.5%);
+    transition-duration: 1000ms;
+    &::before {
+      @include icon-before();
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      content: "\f099";
+    }
+    &:hover {
+        transform: translateX(0%);
+    }
+  }
+  .social-linkedin {
+    @include social-button-text();
+    background-color: #007bb6;
+    transform: translateX(76%);
+    transition-duration: 1000ms;
+    &::before {
+      @include icon-before();
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      content: "\f0e1";
+    }
+    &:hover {
+        transform: translateX(0%);
+    }
+  }
+  .social-facebook {
+    @include social-button-text();
+    background-color: #3b5998;
+    transform: translateX(78%);
+    transition-duration: 1000ms;
+    &::before {
+      @include icon-before();
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      content: "\f39e";
+    }
+    &:hover {
+        transform: translateX(0%);
+    }
+  }
+  .social-github {
+    @include social-button-text();
+    background-color: #333;
+    transform: translateX(78%);
+    transition-duration: 1000ms;
+    &::before {
+      @include icon-before();
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      content: "\f09b";
+    }
+    &:hover {
+        transform: translateX(0%);
+    }
+  }
+}

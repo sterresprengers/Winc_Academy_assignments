@@ -1,0 +1,55 @@
+$footer-color: #686de0;
+@mixin responsiveSize {
+    width: 100%;
+    height: 560px;
+    max-width: 430px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border;
+  @include responsiveSize();
+  margin: auto;
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+  .card-info {
+    font-size: 19px;
+    line-height: 1.9em;
+    padding: 60px 60px 80px 60px;
+    color: rgb(114, 114, 114);
+    margin: 0;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    @include responsiveSize();
+    background-color: $footer-color;
+    color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    img {
+      border-radius: 170px;
+      align-self: center;
+      width: 120px;
+      border: 4px #fff solid;
+      padding: 0px;
+      margin-top: -70px;
+    }
+    .name {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      opacity: 85%;
+    }
+    .website {
+      text-align: center;
+      margin-top: 10px;
+      opacity: 50%;
+    }
+  }
+}

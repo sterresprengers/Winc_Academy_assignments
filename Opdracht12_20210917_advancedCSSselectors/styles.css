@@ -1,0 +1,71 @@
+
+
+article {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 80px 60px;
+    margin: 10px;
+    width: 335px;
+    height: 210px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 13.5px;
+    grid-template-areas: 
+        "h h h h h i"
+        "b b b b b b"
+        "f f f f f f";
+}
+header {
+    grid-area: h;
+    padding: 10px 20px 0px 20px;
+    align-self: end;
+}
+.name {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0px 0px 0px;
+    padding-bottom: 5px;
+}
+.status {
+    color: lightgrey;
+    margin: 0px;
+}
+figure {
+    grid-area: i;
+    align-self: end;
+    margin: 0px;
+}
+.body-text {
+    grid-area: b;
+    padding: 10px 20px;
+    margin: 0px;
+    align-self: center;
+    line-height: 1.6em;
+    border-bottom: 1px solid lightgrey;
+}
+footer {
+    grid-area: f;
+    justify-self: center;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: white;
+    font-family: Verdana,  Tahoma, sans-serif;
+    font-size: 15px;
+    height: 50px;
+    width: 150px;
+}
+.approve-button {
+    grid-column-end: 4;
+    color: rgb(65, 189, 65);
+    border: 2px solid rgb(65, 189, 65);
+    border-radius: 5px;
+
+}
+.decline-button {
+    color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+}
