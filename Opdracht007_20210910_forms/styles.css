@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica;
+    font-size: 15px;
+    background-color: rgba(146, 145, 145, 0.747);
+}
+
+nav {
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.navigation-bar li{
+    display: inline;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: white
+}
+
+article {
+    background-color: #E2E5DE;
+    padding: 40px;
+    border-radius: 20px;
+    border-bottom: 20px;
+    margin: 40px 80px;
+    line-height: 1.8em;
+}
+
+h2 {
+    margin-top: 0px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    line-height: 1.4em;
+}
+img {
+    border: 8px solid white;
+    border-radius: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 60%;
+}
+.intro {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 30px;
+    line-height: 2.2em
+}
+.contact-form {
+    margin: 0 auto;
+    text-align: left;
+    width: 70%;
+}
+.contact-form input, textarea {
+    margin: 5px;
+    padding: 3px;
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-color: #649568;
+        color: #003B00;
+        font-size: 14px;
+    }
+    nav {
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .navigation-bar li {
+        font-size: 25px;
+        padding: 10px;
+    }
+    article {
+        padding: 20px;
+        border-radius: 20px;
+        border-bottom: 20px;
+        margin: 40px 80px;
+        line-height: 1.4em;
+        
+    }
+    h2 {
+        margin-top: 10px;
+        padding-bottom: 0px;
+        font-size: 25px;
+    }
+    .intro {
+        font-size: 12px;
+        font-style: italic;
+        margin-bottom: 10px;
+        line-height: 1.4em
+    }
+    img {
+        border: 8px solid white;
+        border-radius: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 200px;
+    }
+    .contact-form {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+    .contact-form input, textarea {
+        font-size: 20px;
+        background-color: lightgray;
+    }
+
+}

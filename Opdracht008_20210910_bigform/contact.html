@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navigation-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form class="contact-form" data-netlify="true">
+        <p>
+            <label>Your name:<br><input type="name" name="name"/></label>
+        </p>
+        <p>
+            <label>Your e-mail:<br><input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>Mobile:<br><input type="tel" name="mobile" /></label>
+        </p>
+        <p>
+            <label>Date of birth:<br><input type="date" name="date of birth" /></label>
+        </p>
+        <p>
+            <label>Gender:</label><br> 
+                <input type="radio" name="gender" value="male" />
+                <label for="male">Male</label><br>
+                <input type="radio" name="gender" value="female"/>
+                <label for="female">Female</label><br>
+                <input type="radio" name="gender" value="other" />
+                <label for="other">Other</label>
+        </p>
+        <p>
+            <label>Favorite cuisine:</label><br>
+            <input type="checkbox" name="cuisine" value="french" />
+            <label for="french">French</label><br>
+            <input type="checkbox" name="cuisine" value="spanish" />
+            <label for="spanish">Spanish</label><br>
+            <input type="checkbox" name="cuisine" value="italian" />
+            <label for="italian">Italian</label><br>
+            <input type="checkbox" name="cuisine" value="arabic" />
+            <label for="arabic">Arabic</label><br>
+        </p>
+        <p>
+            <label>Favorite apron color:</label><br>
+            <input type="color" />
+        </p>
+        <p>
+            <label>Short biography:<br><textarea rows="4" cols="30" name="short bio">Tell something about yourself</textarea></label>
+        </p>
+        <p>
+            <label>Upload new recipe:<br><input type="file" name="recipe file" /></label>
+        </p>
+        <p>
+            <label>Your recipe website:<br><input type="url" name="recipe-website" /></label>
+        </p>
+        <p>
+            <input type="reset" />
+            <input type="submit" value="Send" />
+        </p>
+    </form>
+
+</body>
+
+</html>

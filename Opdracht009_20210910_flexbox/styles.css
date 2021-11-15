@@ -1,0 +1,16 @@
+.blogpost {
+    width: 300px;
+    border: 1px solid black;
+}
+.flex-test {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post1 {
+    background-color: red;
+}
+.post4 {
+    color: green;
+}

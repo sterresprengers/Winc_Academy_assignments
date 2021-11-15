@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+    display: grid;
+}
+body {
+    margin: 0;
+}
+
+.site-body {
+    height: 100%;
+    display: grid;
+    color: white;
+    border: 3px solid grey;
+    margin: 0;
+    padding: 0;
+    grid-gap: 8px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px auto 160px 80px;
+    grid-template-areas:
+        "h h h h h h"
+        "m m m m m m"
+        "w w w w w w"
+        "f f f f f f";
+}
+
+.site-header {
+    grid-area: h;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.site-main {
+    grid-area: m;
+    background-color: green;
+    padding: 20px;
+}
+
+.widget-area {
+    grid-area: w;
+    background-color: purple;
+    padding: 20px;
+}
+
+.site-footer {
+    grid-area: f;
+    background-color: royalblue;
+    padding: 20px;
+}
+
+@media (min-width: 1024px) {
+    .site-body {
+        grid-template-areas:
+            "h h m m m m"
+            "h h m m m m"
+            "h h w w w w"
+            "h h f f f f";
+    }
+    .site-header {
+        grid-column: 1 / 2;
+    }
+    
+    .site-main {
+        grid-column: 2 / -1;
+    }
+
+    .widget-area {
+        grid-column: 2 / -1;
+    }
+    .site-footer {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (min-width: 1800px) {
+    .site-body {
+        grid-template-areas:
+        "h h m m w w"
+        "h h m m w w"
+        "h h m m w w"
+        "h h f f w w";
+    }
+    .site-main {
+        grid-column: 2 / 5;
+    }
+    .widget-area {
+        grid-column: 5 / -1;
+    }
+    .site-footer {
+        grid-column: 2 / 5;
+    }
+}
