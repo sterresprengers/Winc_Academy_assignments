@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+#header {
+    color: rgb(219, 219, 219);
+    font-size: 50px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    padding: 40px 0px
+}
+#or {
+    color: white;
+    font-size: 40px;
+    font-family: Helvetica, sans-serif;
+    
+}
+
+#buttons {
+    text-align: center;
+}
+button {
+    font-size: 40px;
+    border-style: outset;
+    border-width: 4px;;
+}
+.text-styling {
+    color:rgb(252, 143, 161);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    margin: 80px;
+}
+.image-styling {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(252, 143, 161);
+    margin-top: 250px;
+}
