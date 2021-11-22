@@ -13,6 +13,7 @@
 
 const functions = require('./functions.js')
 
+// toBeNull()
 test('Should be null', () => {
     // Start with expect()
     // Inside the first brackets put what you want to test. That will be a function.
@@ -23,12 +24,20 @@ test('Should be null', () => {
     expect(functions.isNull()).toBeNull();
 });
 
+// toBeFalsy()
 test('checkValue Should be falsy when argument is undefined', () => {
     expect(functions.checkValue()).toBeFalsy();
+    // expect(functions.checkValue(undefined)).toBeFalsy >> solution by Winc
 });
 
+// toEqual()
 test('User should be Brad Traversy object', () => {
-    expect(functions.createUser()).toBeDefined();
+    // soltion given by Winc:
+    expect(functions.createUser()).toEqual({
+        firstname: "Brad",
+        lastName: "Traversy"
+    });
+    // expect(functions.createUser()).toBeDefined();
     // expect(functions.createUser()).toBeTruthy(); >> also passes
 });
 
@@ -40,13 +49,14 @@ test('Should be under or equal to 1600', () => {
     const load1 = 800;
     const load2 = 800;
     // expect(load1 + load2).toBe.....
-    expect(load1 + load2).toBe(1600);
+    expect(load1 + load2).toBeLessThanOrEqual(1600);
 });
 
 // Regex
 test('There is no I in team', () => {
     //  expect('team').not.to..........;
     expect('team').not.toContain('i');
+    // expect('team').not.toMatch(/I/i); >> solution by Winc
 });
 
 // Arrays
