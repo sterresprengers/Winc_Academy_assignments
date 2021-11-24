@@ -1,63 +1,92 @@
-// const password1 = "henkie1";
-// const password2 = "1234a";
-// const password3 = "z";
-// const password4 = "henkie1234";
-// const password5 = "HENKhenk";
-// const password6 = "HENK33$";
-// const password7 = "1234";
-// const password8 = "";
+const {
+    isNotNull,
+    hasRightLength,
+    hasUpperCaseCharacter,
+    hasLowerCaseCharacter,
+    hasDigit,
+    minimumConditionsReached,
+    verifyPassword,
+} = require("./functions");
 
-// const {
-//     isNotNull,
-//     hasRightLength,
-//     // hasUpperCaseCharacter,
-//     // hasLowerCaseCharacter,
-// } = require("./functions")
-
-// 1 TEST Password is not null
-const isNotNull = require("./functions");
-
-test("Password is not null", () => {
-    expect(isNotNull("henkie1")).toBeTruthy()
-    expect(isNotNull("")).toBeFalsy();
+describe("Testing utility functions", () => {
+    test("1. Password is not null", () => {
+        expect(isNotNull("henkie1")).toBe(true);
+    });
+    test("1. Password is not null", () => {
+        expect(isNotNull(null)).toBe(false);
+    });
+    test("2. Password is shorter than 9 characters", () => {
+        expect(hasRightLength("12345678")).toBeTruthy();
+    });
+    test("2. Password is shorter than 9 characters", () => {
+        expect(hasRightLength("asdfghjklqwertyu")).toBeFalsy();
+    });
+    test("3. Password has one or more uppercase characters", () => {
+        expect(hasUpperCaseCharacter("henkie")).toBe(false);
+    });
+    test("3. Password has one or more uppercase characters", () => {
+        expect(hasUpperCaseCharacter("AB")).toBe(true);
+    });
+    test("4. Password has one or more lowercase characters", () => {
+        expect(hasLowerCaseCharacter("AB")).toBe(false);
+    });
+    test("4.Password has one or more lowercase characters", () => {
+        expect(hasLowerCaseCharacter("heie")).toBe(true);
+    });
+    test("5. Password has one or more digits", () => {
+        expect(hasDigit("123abc")).toBe(true);
+    });
+    test("5. Password has one or more digits", () => {
+        expect(hasDigit("abcdef")).toBe(false);
+    });
 });
 
-// // // // 2 TEST Password is shorter than 9 characters
-// const hasRightLength = require("./functions"); 
+describe("Testing combination of conditions", () => {
+    test("minimumConditionReached", () => {
+        expect(minimumConditionsReached([true, true, true, true, false])).toBe(true);
+    });
+    test("minimumConditionReached", () => {
+        expect(minimumConditionsReached([false, false, false, true, true])).toBe(false);
+    });
+});
 
-// test("Password is shorter than 9 characters", () => {
-//     expect(hasRightLength("12345678")).toBeTruthy();
-//     expect(hasRightLength("asdfghjklqwertyu")).toBeFalsy();
-//     expect(hasRightLength("HENKhenk")).toBeFalsy();
-// });
-
-// // // 3 TEST Password has one or more uppercase characters
-// const upperCaseCharacter = require("./functions");
-
-// test("Password has one or more uppercase characters", () => {
-//     expect(upperCaseCharacter("henkie")).toBe(false);
-//     expect(upperCaseCharacter("AB")).toBe(true);
-// });
-
-// // // 4 Test Password has one or more lowercase characters
-// const hasLowerCaseCharacter = require("./functions");
-
-// test("Password has one or more lowercase characters", () => {
-//     expect(hasLowerCaseCharacter("AB")).toBe(false);
-//     expect(hasLowerCaseCharacter("heie")).toBe(true);
-// });
-
+describe("Testing verifyPassword function", () => {
+    test("verifyPassword: henkie1", () => {
+        expect(verifyPassword("henkie1")).toBe(true);
+    });
+    test("verifyPassword: 123a", () => {
+        expect(verifyPassword("123a")).toBe(true);
+    });
+    test("verifyPassword: z", () => {
+        expect(verifyPassword("z")).toBe(true);
+    });
+    test("verifyPassword: henkie1234", () => {
+        expect(verifyPassword("henkie1234")).toBe(true);
+    });
+    test("verifyPassword: HENKhenk", () => {
+        expect(verifyPassword("HENKhenk")).toBe(true);
+    });
+    test("verifyPassword: HENK33$", () => {
+        expect(verifyPassword("HENK33$")).toBe(false);
+    });
+    test("verifyPassword: 1234", () => {
+        expect(verifyPassword("1234")).toBe(false);
+    });
+    test("verifyPassword: null", () => {
+        expect(verifyPassword(null)).toBe(false);
+    });
+});
 
 // Winc Github solutions: https://github.com/WincAcademy/solutions-exercises/blob/master/testing_password-verifier/password-verifier.test.js 
 
 // const {
-//     // verifyPassword,
-//     hasRightLength,
 //     isNotNull,
+//     hasRightLength,
 //     hasUpperCaseCharacter,
 //     hasLowerCaseCharacter,
 //     hasDigit,
 //     // minimumConditionsReached,
+//     // verifyPassword,
 // } = require("./functions");
 
 // describe("Password verifier utility functions", () => {
