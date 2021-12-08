@@ -7,7 +7,8 @@ function ShoppingCart(props) {
     return (
         <div>
             <h1>Shopping Cart</h1>
-            <List listItems={props.list} handleClickItem={props.handleClickItem}/>
+            <button onClick={props.emptyCart}>Empty cart</button>
+            <List listItems={props.list} />
         </div>
     )
 }

@@ -18,6 +18,7 @@ class Container extends React.Component {
             ]
         }
         this.handleClickItem = this.handleClickItem.bind(this)
+        this.emptyCart = this.emptyCart.bind(this)
     }
 
     handleClickItem(event) {
@@ -27,11 +28,16 @@ class Container extends React.Component {
         })
     }
 
+    emptyCart() {
+        console.log("emptyCart was clicked")
+        this.setState({ shoppingListItems: []})
+    }
+
     render() {
         return (
             <div>
                 <GroceryList list={this.state.groceryItems} handleClickItem={this.handleClickItem}/>
-                <ShoppingCart list={this.state.shoppingListItems}/>
+                <ShoppingCart list={this.state.shoppingListItems} emptyCart={this.emptyCart}/>
             </div> 
             
         )
