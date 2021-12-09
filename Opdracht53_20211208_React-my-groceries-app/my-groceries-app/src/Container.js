@@ -17,28 +17,41 @@ class Container extends React.Component {
                 {id: 6, title: "Peanut butter"}
             ]
         }
-        this.handleClickItem = this.handleClickItem.bind(this)
+        this.handleClickGroceryItems = this.handleClickGroceryItems.bind(this)
         this.emptyCart = this.emptyCart.bind(this)
     }
 
-    handleClickItem(event) {
-        console.log("clicked handleClickItem with", event)
+    handleClickGroceryItems(event) {
+        const clickedItem = event.target.getAttribute("value")
+        const clickedItemId = event.target.getAttribute("key")
         this.setState({
-            shoppingListItems: [...this.state.shoppingListItems].concat([event])
+            shoppingListItems: [...this.state.shoppingListItems].concat({id: clickedItemId, title: clickedItem })
         })
     }
 
     emptyCart() {
-        console.log("emptyCart was clicked")
         this.setState({ shoppingListItems: []})
     }
 
-    render() {
+    render() { 
         return (
-            <div>
-                <GroceryList list={this.state.groceryItems} handleClickItem={this.handleClickItem}/>
-                <ShoppingCart list={this.state.shoppingListItems} emptyCart={this.emptyCart}/>
-            </div> 
+            <main className="container">
+                <div className="groceries-list groceries">
+                    <h1>Groceries List</h1>
+                    <GroceryList 
+                        groceryItems={this.state.groceryItems} 
+                        handleClickGroceryItems={this.handleClickGroceryItems}
+                    />
+                </div>
+                <div className="groceries-list basket">
+                    <h1>Shopping Cart</h1>
+                    <ShoppingCart 
+                        shoppingItems={this.state.shoppingListItems} 
+                        emptyCart={this.emptyCart}
+                    />
+                </div>
+                
+            </main> 
             
         )
     }

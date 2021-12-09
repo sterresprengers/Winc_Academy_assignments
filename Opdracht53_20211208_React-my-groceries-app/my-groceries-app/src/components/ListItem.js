@@ -1,18 +1,13 @@
 import React from "react"
 
-function ListItem(prop) {
-
-    function handleOnClick(item) {
-        prop.handleClickItem(item)
-    }
-
+function ListItem({item, handleClickGroceryItems}) {
     return (
         <li
-            key={prop.id}
+            key={item.id}
             className="list-item"
-            onClick={() => handleOnClick(prop)}
-            value={prop.title}
-        >{prop.title}</li>
+            onClick={handleClickGroceryItems}
+            value={item.title}
+        >{item.title}</li>
     )
 }
 

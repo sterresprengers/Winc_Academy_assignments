@@ -1,13 +1,10 @@
 import React from "react"
 import List from "./List.js"
 
-function GroceryList(props) {
-    console.log("this is props in GroceryList", props)
-    // props = list
+const GroceryList = ({groceryItems, handleClickGroceryItems}) => {
     return (
         <div>
-            <h1>Grocery List</h1>
-            <List listItems={props.list} handleClickItem={props.handleClickItem}/>
+            <List listItems={groceryItems} handleClickGroceryItems={handleClickGroceryItems}/>
             </div>
         
     )
